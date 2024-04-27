@@ -1,5 +1,6 @@
 import SearchForm from "./components/SearchForm/SearchForm";
 import PopularCity from "./components/PopularCity/popularCity";
+import WeatherButton from "./components/GetWeatherWeek/getWeatherWeek";
 import "./App.css";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <PopularCity />
       <SearchForm />
+      <WeatherButton />
     </div>
   );
 }
