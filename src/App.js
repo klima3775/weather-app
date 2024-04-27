@@ -1,10 +1,12 @@
-import logo from "./logo.svg";
+import SearchForm from "./components/SearchForm/SearchForm";
+import PopularCity from "./components/PopularCity/popularCity";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <PopularCity />
+      <SearchForm />
     </div>
   );
 }
