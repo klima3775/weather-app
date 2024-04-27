@@ -1,13 +1,21 @@
+import "./popularCity.scss";
+
 const PopularCity = () => {
-  return (
-    <div>
-      <h2>Popular Cities</h2>
-      <ul>
-        <li>Paris</li>
-        <li>London</li>
-        <li>New York</li>
-      </ul>
-    </div>
-  );
+  const buttonsCity = [
+    { name: "Дніпро", label: "Днепр" },
+    { name: "Харків", label: "Харків" },
+    { name: "Львів", label: "Львів" },
+    { name: "Київ", label: "Київ" },
+  ];
+
+  const buttons = buttonsCity.map(({ name, label }) => {
+    return (
+      <button key={name} className="btnCity__item">
+        {label}
+      </button>
+    );
+  });
+
+  return <div className="btnCity">{buttons}</div>;
 };
 export default PopularCity;

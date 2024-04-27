@@ -1,0 +1,20 @@
+.btnCity {
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: #ca4141;
+  color: #000;
+  .btnCity__item {
+    margin: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
