@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <PopularCity />
       <SearchForm />
-      <WeatherButton />
     </div>
   );
 }
