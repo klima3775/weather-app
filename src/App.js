@@ -1,6 +1,6 @@
 import SearchForm from "./components/SearchForm/SearchForm";
 import PopularCity from "./components/PopularCity/popularCity";
-import WeatherButton from "./components/GetWeatherWeek/getWeatherWeek";
+import WeatherButton from "./components/GetWeather/getWeather";
 import "./App.css";
 
 function App() {
