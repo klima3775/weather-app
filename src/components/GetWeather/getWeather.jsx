@@ -1,7 +1,7 @@
 import "./getWeather.scss";
 
-const WeatherButton = () => {
-  return <button className="weather-button">Показати погоду </button>;
+const WeatherButton = ({ buttonText }) => {
+  return <button className="weather-button">{buttonText}</button>;
 };
 
 export default WeatherButton;

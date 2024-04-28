@@ -5,7 +5,7 @@ const SearchForm = () => {
     <div className="search">
       <form>
         <input type="text" placeholder="Искать здесь..." />
-        <WeatherButton />
+        <WeatherButton buttonText="Показати погоду" />
       </form>
     </div>
   );
