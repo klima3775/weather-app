@@ -1,11 +1,11 @@
-import "./SearchForm.scss";
-
+import "./searchForm.scss";
+import WeatherButton from "../GetWeather/getWeather";
 const SearchForm = () => {
   return (
     <div className="search">
       <form>
         <input type="text" placeholder="Искать здесь..." />
-        <button type="submit"></button>
+        <WeatherButton />
       </form>
     </div>
   );

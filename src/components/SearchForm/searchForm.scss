@@ -30,22 +30,22 @@
       }
     }
 
-    button {
-      background: #683b4d;
-      border: none;
-      height: 42px;
-      width: 42px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      cursor: pointer;
+    // button {
+    //   background: #683b4d;
+    //   border: none;
+    //   height: 42px;
+    //   width: 42px;
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   cursor: pointer;
 
-      &:before {
-        content: "\f002";
-        font-family: FontAwesome;
-        font-size: 16px;
-        color: #f9f0da;
-      }
-    }
+    //   &:before {
+    //     content: "\f002";
+    //     font-family: FontAwesome;
+    //     font-size: 16px;
+    //     color: #f9f0da;
+    //   }
+    // }
   }
 }
