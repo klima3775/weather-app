@@ -5,10 +5,10 @@ import { fetchWeatherData } from "../../utils/response";
 
 const RenderWeather = () => {
   const [weatherData, setWeatherData] = useState(null);
-  const apiKey = "f8a6fd2ffd9f9c4b8a5d7d56edf35101";
+
   const handleSearch = async (city) => {
     try {
-      const data = await fetchWeatherData(city, apiKey);
+      const data = await fetchWeatherData(city);
       setWeatherData(data);
     } catch (error) {
       console.error(error);
