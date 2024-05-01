@@ -1,6 +1,6 @@
 const WeatherItem = ({ weatherData }) => {
   if (!weatherData) {
-    return <div>Погода не найдена</div>;
+    return null;
   }
   return (
     <div className="weather">
