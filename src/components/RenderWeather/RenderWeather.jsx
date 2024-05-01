@@ -1,26 +1,15 @@
 import { useState } from "react";
 import SearchForm from "../SearchForm/SearchForm";
 import WeatherItem from "../WeatherItem/WeatherItem";
+import { fetchWeatherData } from "../../utils/response";
 
 const RenderWeather = () => {
   const [weatherData, setWeatherData] = useState(null);
-
-  const handleSearch = async () => {
+  const apiKey = "f8a6fd2ffd9f9c4b8a5d7d56edf35101";
+  const handleSearch = async (city) => {
     try {
-      const apiKey = "f8a6fd2ffd9f9c4b8a5d7d56edf35101";
-      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}`;
-
-      const response = await fetch(apiUrl);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json(); // Добавьте эту строку для получения данных из ответа
-      const weatherInfo = {
-        city: data.name,
-        temperature: data.main.temp,
-        description: data.weather[0].description,
-      };
-      setWeatherData(weatherInfo);
+      const data = await fetchWeatherData(city, apiKey);
+      setWeatherData(data);
     } catch (error) {
       console.error(error);
       setWeatherData(null);
