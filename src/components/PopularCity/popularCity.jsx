@@ -1,9 +1,6 @@
 import "./popularCity.scss";
-import React, { useState } from "react";
-import { fetchWeatherData } from "../../utils/response";
 
-const PopularCity = () => {
-  const [weatherData, setWeatherData] = useState(null);
+const PopularCity = ({ onCityClick }) => {
   const buttonsCity = [
     { name: "Дніпро", label: "Днепр" },
     { name: "Харків", label: "Харків" },
@@ -11,17 +8,12 @@ const PopularCity = () => {
     { name: "Київ", label: "Київ" },
   ];
 
-  const handleCLick = async (city) => {
-    const data = await fetchWeatherData(city);
-    setWeatherData(null);
-  };
-
   const buttons = buttonsCity.map(({ name, label }) => {
     return (
       <button
         key={name}
         className="btnCity__item"
-        onClick={() => handleCLick(name)}
+        onClick={() => onCityClick(name)}
       >
         {label}
       </button>
@@ -34,4 +26,5 @@ const PopularCity = () => {
     </div>
   );
 };
+
 export default PopularCity;
