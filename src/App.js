@@ -28,8 +28,8 @@ function App() {
 
   return (
     <div className="App">
-      <PopularCity onCityClick={handleCitySelect} />
       <SearchForm onSearch={handleCitySelect} />
+      <PopularCity onCityClick={handleCitySelect} />
       <WeatherItem weatherData={weatherData} />
       {isModalOpen && (
         <div className="modal">

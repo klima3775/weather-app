@@ -1,3 +1,5 @@
+import WeatherButton from "../GetWeather/getWeather";
+
 const WeatherItem = ({ weatherData }) => {
   if (!weatherData) {
     return null;
@@ -7,6 +9,7 @@ const WeatherItem = ({ weatherData }) => {
       <h2>Погода в {weatherData.city}</h2>
       <p>Температура: {weatherData.temperature}°C</p>
       <p>Описание: {weatherData.description}</p>
+      <WeatherButton buttonText="Погода на 4 дні" />
     </div>
   );
 };
