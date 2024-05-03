@@ -1,23 +1,7 @@
-// import WeatherButton from "../GetWeather/getWeather";
-
-// const WeatherItem = ({ weatherData }) => {
-//   if (!weatherData) {
-//     return null;
-//   }
-//   return (
-//     <div className="weather">
-//       <h2>Погода в {weatherData.city}</h2>
-//       <p>Температура: {weatherData.temperature}°C</p>
-//       <p>Описание: {weatherData.description}</p>
-//       <p>Карта опадів: {weatherData.mapTileUrl}</p>
-//       <WeatherButton buttonText="Погода на 4 дні" />
-//     </div>
-//   );
-// };
-// export default WeatherItem;
 import React, { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import WeatherButton from "../GetWeather/getWeather";
 
 const WeatherItem = ({ weatherData }) => {
   const mapRef = useRef();
@@ -58,6 +42,7 @@ const WeatherItem = ({ weatherData }) => {
       <p>Температура: {weatherData.temperature}°C</p>
       <p>Описание: {weatherData.description}</p>
       <div id="map" ref={mapRef} style={{ height: "300px", width: "100%" }} />
+      <WeatherButton buttonText="Погода на 4 дні" />
     </div>
   );
 };
