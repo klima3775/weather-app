@@ -41,9 +41,17 @@ const WeatherItem = ({ weatherData }) => {
     <div className="weather">
       <h2>Погода в {weatherData.city}</h2>
       <p>Температура: {weatherData.temperature}°C</p>
+      <p>Тиск: ${weatherData.pressure} hPa</p>
+      <p>Вологість: {weatherData.humidity}%</p>
+      <p>Швидкість вітру: {weatherData.windSpeed} м/с</p>
+      <p>Напрямок вітру: {weatherData.windDirection}°</p>
+      <img
+        src={`https://openweathermap.org/img/w/${weatherData.weatherIcon}.png`}
+        alt={weatherData.description}
+      ></img>
       <p>Описание: {weatherData.description}</p>
       <div id="map" ref={mapRef} style={{ height: "300px", width: "100%" }} />
-      <WeatherButton buttonText="Погода на 4 дні" />
+      {/* <WeatherButton buttonText="Погода на 4 дні" /> кнопка вывода погоды на несколько дней*/}
     </div>
   );
 };
