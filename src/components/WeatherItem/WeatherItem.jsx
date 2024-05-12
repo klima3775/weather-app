@@ -38,23 +38,6 @@ const WeatherItem = ({ weatherData }) => {
   }
 
   return (
-    // <div className="weather">
-    //   <h2>{weatherData.city}</h2>
-    //   <p>{weatherData.description}</p>
-    //   <img
-    //     src={`https://openweathermap.org/img/w/${weatherData.weatherIcon}.png`}
-    //     alt={weatherData.description}
-    //   ></img>
-
-    //   <p> {weatherData.temperature}°C</p>
-    //   {/* <p>Тиск: ${weatherData.pressure} hPa</p> */}
-    //   <p>Вологість: {weatherData.humidity}%</p>
-    //   <p>Швидкість вітру: {weatherData.windSpeed} м/с</p>
-    //   {/* <p>Напрямок вітру: {weatherData.windDirection}°</p> */}
-
-    //   {/* <div id="map" ref={mapRef} style={{ height: "300px", width: "100%" }} /> */}
-    //   {/* <WeatherButton buttonText="Погода на 4 дні" /> кнопка вывода погоды на несколько дней*/}
-    // </div>
     <div className="weather">
       <div className="top">
         <div className="left">
