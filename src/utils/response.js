@@ -18,7 +18,7 @@ export const fetchWeatherData = async (city) => {
       windDirection: data.wind.deg,
       weatherIcon: data.weather[0].icon,
       description: data.weather[0].description,
-      mapTileUrl: `https://tile.openweathermap.org/map/{temp_new}/{z}/{x}/{y}.png?appid=${apiKey}`,
+      // mapTileUrl: `https://tile.openweathermap.org/map/{temp_new}/{z}/{x}/{y}.png?appid=${apiKey}`,
     };
 
     return weatherInfo;

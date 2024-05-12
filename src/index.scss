@@ -5,20 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./img/kosmos.jpg);
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-// .Index {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-//   background-image: url("img/milky-way-night-sky-blue.jpg");
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: center;
-// }

@@ -1,0 +1,35 @@
+$backgroundColor: #add8e6;
+$textColor: rgb(26, 26, 26);
+$headingColor: rgb(0, 0, 0);
+$fontSize: 18px;
+$headingSize: 24px;
+$marginSize: 20px;
+
+.weather {
+  background-image: url("../../img/pngtree-blue-sky-weather-background-image_410035.jpg");
+  background-size: cover;
+  border-radius: 10px;
+  padding: $marginSize;
+  margin: $marginSize;
+  text-align: center;
+
+  h2 {
+    color: $headingColor;
+    font-size: $headingSize;
+  }
+
+  p {
+    color: $textColor;
+    font-size: $fontSize;
+  }
+
+  img {
+    margin-top: $marginSize;
+  }
+
+  #map {
+    margin-top: $marginSize;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
