@@ -11,21 +11,24 @@ $marginSize: 20px;
   border-radius: 10px;
   padding: $marginSize;
   margin: $marginSize;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 300px;
 
+  .time {
+    text-align: center;
+    color: $textColor;
+    font-size: $fontSize;
+  }
   .top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .left {
-      text-align: left;
+      text-align: center;
 
       h2 {
         color: $headingColor;
-        font-size: $headingSize;
+        font-size: $headingSize; // Uncomment this line
       }
 
       p {
@@ -35,18 +38,12 @@ $marginSize: 20px;
     }
 
     .right {
-      text-align: right;
+      margin-top: 10px;
+      text-align: center;
     }
   }
 
   img {
-    margin-top: $marginSize;
     align-self: center;
-  }
-
-  #map {
-    margin-top: $marginSize;
-    border-radius: 10px;
-    overflow: hidden;
   }
 }

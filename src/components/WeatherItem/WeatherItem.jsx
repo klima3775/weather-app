@@ -1,11 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import Moment from "react-moment";
 import WeatherButton from "../GetWeather/getWeather";
+import Timer from "../Timer/timer";
+
 import "./weather.scss";
 
 const WeatherItem = ({ weatherData }) => {
-  // const mapRef = useRef();
+  // const mapRef = useRef(); заготовка для карты
 
   // useEffect(() => {
   //   if (weatherData) {
@@ -39,6 +42,9 @@ const WeatherItem = ({ weatherData }) => {
 
   return (
     <div className="weather">
+      <div className="time">
+        <Timer />
+      </div>
       <div className="top">
         <div className="left">
           <h2>{weatherData.city}</h2>
