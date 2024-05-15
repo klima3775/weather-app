@@ -6,18 +6,27 @@ const Timer = () => {
   const [time, setTime] = useState(new Date());
   const [prevMinute, setPrevMinute] = useState(time.getMinutes());
   const [prevHour, setPrevHour] = useState(time.getHours());
-  const [animate, setAnimate] = useState(false);
+  const [animateMinute, setAnimateMinute] = useState(false);
+  const [animateHour, setAnimateHour] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
       const currentTime = new Date();
       const currentMinute = currentTime.getMinutes();
+      const currentHour = currentTime.getHours();
 
       if (currentMinute !== prevMinute) {
-        setAnimate(true);
+        setAnimateMinute(true);
         setPrevMinute(currentMinute);
       } else {
-        setAnimate(false);
+        setAnimateMinute(false);
+      }
+
+      if (currentHour !== prevHour) {
+        setAnimateHour(true);
+        setPrevHour(currentHour);
+      } else {
+        setAnimateHour(false);
       }
 
       setTime(currentTime);
@@ -26,14 +35,14 @@ const Timer = () => {
     return () => {
       clearInterval(timer);
     };
-  });
+  }, [prevMinute, prevHour]);
 
   return (
     <div className="timer">
-      <div className={`time-card ${animate ? "flip" : ""}`}>
+      <div className={`time-card-hours ${animateHour ? "flip" : ""}`}>
         <Moment format="HH">{time}</Moment>
       </div>
-      <div className={`time-card ${animate ? "flip" : ""}`}>
+      <div className={`time-card-minutes ${animateMinute ? "flip" : ""}`}>
         <Moment format="mm">{time}</Moment>
       </div>
     </div>

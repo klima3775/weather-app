@@ -3,11 +3,19 @@
   align-items: center;
   justify-content: center;
 
-  .time-card {
+  .time-card-hours {
     font-size: 2em;
     background-color: #f4f4f4;
     border-radius: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 5px 15px 16px 0px rgba(49, 36, 36, 0.2);
+    padding: 10px;
+    margin: 0 5px;
+  }
+  .time-card-minutes {
+    font-size: 2em;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: inset 5px 15px 16px 0px rgba(49, 36, 36, 0.2);
     padding: 10px;
     margin: 0 5px;
   }
