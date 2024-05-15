@@ -1,0 +1,32 @@
+.modal {
+  position: fixed; /* Фиксированное позиционирование */
+  z-index: 1; /* Положить модальное окно поверх других элементов */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включить прокрутку, если необходимо */
+  background-color: rgba(0, 0, 0, 0.4); /* Черный фон с прозрачностью */
+
+  &-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% от верхнего края и центрировано */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина модального окна */
+
+    &-close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+
+      &:hover,
+      &:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
