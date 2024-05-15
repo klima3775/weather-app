@@ -38,12 +38,25 @@ const Timer = () => {
   }, [prevMinute, prevHour]);
 
   return (
-    <div className="timer">
-      <div className={`time-card-hours ${animateHour ? "flip" : ""}`}>
-        <Moment format="HH">{time}</Moment>
+    <div className="local-date">
+      <div className="date">
+        <div className="info-date">
+          <Moment format="dddd">{time}</Moment>
+        </div>
+        <div className="info-date">
+          <Moment format="D">{time}</Moment>
+        </div>
+        <div className="info-date">
+          <Moment format="MMMM">{time}</Moment>
+        </div>
       </div>
-      <div className={`time-card-minutes ${animateMinute ? "flip" : ""}`}>
-        <Moment format="mm">{time}</Moment>
+      <div className="timer">
+        <div className={`time-card-hours ${animateHour ? "flip" : ""}`}>
+          <Moment format="HH">{time}</Moment>
+        </div>
+        <div className={`time-card-minutes ${animateMinute ? "flip" : ""}`}>
+          <Moment format="mm">{time}</Moment>
+        </div>
       </div>
     </div>
   );
