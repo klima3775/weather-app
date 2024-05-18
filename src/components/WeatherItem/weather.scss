@@ -12,8 +12,26 @@ $marginSize: 20px;
   padding: $marginSize;
   margin: $marginSize;
   width: 400px;
+
   p {
     color: white;
+  }
+
+  .weather-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    &:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
   }
 
   .time {

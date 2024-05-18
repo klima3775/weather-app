@@ -61,7 +61,7 @@ const WeatherItem = ({ weatherData }) => {
       <p>Вологість: {weatherData.humidity}%</p>
       <p>Швидкість вітру: {weatherData.windSpeed} м/с</p>
       {/* <div id="map" ref={mapRef} style={{ height: "300px", width: "100%" }} /> */}
-      {/* <WeatherButton buttonText="Погода на 4 дні" /> */}
+      <WeatherButton buttonText="Погода на 4 дні" />
     </div>
   );
 };
