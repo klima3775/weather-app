@@ -1,47 +1,55 @@
-.date {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  gap: 10px;
-}
+.local-date {
+  font-size: 18px;
+  .date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    gap: 10px;
 
-.timer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .time-card-hours {
-    font-size: 2em;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: inset 10px 30px 16px 0px rgba(49, 36, 36, 0.2);
-    padding: 10px;
-    margin: 0 5px;
-  }
-  .time-card-minutes {
-    font-size: 2em;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: inset 10px 30px 16px 0px rgba(49, 36, 36, 0.2);
-    padding: 10px;
-    margin: 0 5px;
-  }
-
-  .flip {
-    animation: flip 1s linear;
-  }
-
-  @keyframes flip {
-    0% {
-      transform: rotateX(0deg);
+    .info-date {
+      color: #f4f4f4;
     }
-    50% {
-      transform: rotateX(90deg);
+  }
+
+  .timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    .time-card-hours {
+      font-size: 2em;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: inset 10px 30px 16px 0px rgba(49, 36, 36, 0.2);
+      padding: 10px;
+      margin: 0 5px;
     }
-    100% {
-      transform: rotateX(180deg);
+    .time-card-minutes {
+      font-size: 2em;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: inset 10px 30px 16px 0px rgba(49, 36, 36, 0.2);
+      padding: 10px;
+      margin: 0 5px;
+    }
+
+    .flip {
+      animation: flip 1s linear;
+    }
+
+    @keyframes flip {
+      0% {
+        transform: rotateX(0deg);
+      }
+      50% {
+        transform: rotateX(90deg);
+      }
+      100% {
+        transform: rotateX(180deg);
+      }
     }
   }
 }

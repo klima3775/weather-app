@@ -6,17 +6,18 @@ $headingSize: 24px;
 $marginSize: 20px;
 
 .weather {
-  background-image: url("../../img/pngtree-blue-sky-weather-background-image_410035.jpg");
+  background-image: url("../../img/mountain.jpg");
   background-size: cover;
   border-radius: 10px;
   padding: $marginSize;
   margin: $marginSize;
   width: 400px;
+  p {
+    color: white;
+  }
 
   .time {
     text-align: center;
-    color: $textColor;
-    font-size: $fontSize;
   }
   .top {
     display: flex;
@@ -27,19 +28,20 @@ $marginSize: 20px;
       text-align: center;
 
       h2 {
-        color: $headingColor;
+        color: white;
         font-size: $headingSize; // Uncomment this line
       }
 
       p {
-        color: $textColor;
+        color: white;
         font-size: $fontSize;
       }
     }
 
     .right {
-      margin-top: 10px;
       text-align: center;
+      color: white;
+      font-size: $fontSize;
     }
   }
 
