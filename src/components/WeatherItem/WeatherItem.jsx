@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import Moment from "react-moment";
 import WeatherButton from "../GetWeather/getWeather";
 import Timer from "../Timer/timer";
+import WeatherThreeHours from "../WeatherThreeHours/weatherHoursInfo";
 
 import "./weather.scss";
 
@@ -58,8 +59,13 @@ const WeatherItem = ({ weatherData }) => {
           />
         </div>
       </div>
-      <p>Вологість: {weatherData.humidity}%</p>
-      <p>Швидкість вітру: {weatherData.windSpeed} м/с</p>
+      <div className="weather-details">
+        <p>Вологість: {weatherData.humidity}%</p>
+        <p>Швидкість вітру: {weatherData.windSpeed} м/с</p>
+      </div>
+      <div className="weather-forecast">
+        <WeatherThreeHours city={weatherData.city} />
+      </div>
       {/* <div id="map" ref={mapRef} style={{ height: "300px", width: "100%" }} /> */}
       <WeatherButton buttonText="Погода на 4 дні" />
     </div>
