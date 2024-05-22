@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PopularCity from "./components/PopularCity/popularCity";
-import SearchForm from "./components/SearchForm/searchForm";
+import SearchForm from "./components/SearchForm/SearchForm";
 import WeatherItem from "./components/WeatherItem/WeatherItem";
 import { fetchWeatherData } from "./utils/response";
 import Modal from "./components/Modal/Modal"; // Импортируйте ваш новый компонент модального окна

@@ -10,14 +10,19 @@ export const threeHoursResponse = (city) => {
       return response.json();
     })
     .then((data) => {
-      const weatherInfo = data.list.map((item) => {
-        return {
-          dt_txt: item.dt_txt,
-          main: item.main,
-          weather: item.weather,
-          wind: item.wind,
-        };
-      });
+      const weatherInfo = data.list
+        .map((item) => {
+          return {
+            dt_txt: item.dt_txt,
+            main: {
+              ...item.main,
+              temp: Math.round(item.main.temp),
+            },
+            weather: item.weather,
+            wind: item.wind,
+          };
+        })
+        .slice(0, 8);
 
       return weatherInfo;
     })

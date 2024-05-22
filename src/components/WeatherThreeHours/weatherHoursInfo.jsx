@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { threeHoursResponse } from "../../utils/threeHours"; // замените на путь к вашему файлу API
+import { threeHoursResponse } from "../../utils/threeHours";
+import "./weatherThree.scss";
 
 const WeatherThreeHours = ({ city }) => {
   const [weatherData, setWeatherData] = useState([]);
@@ -7,20 +8,23 @@ const WeatherThreeHours = ({ city }) => {
   useEffect(() => {
     threeHoursResponse(city)
       .then((data) => {
-        const filteredData = data.filter((item) => {
-          const hour = new Date(item.dt_txt).getUTCHours();
-          return hour >= 0 && hour <= 24;
-        });
-        setWeatherData(filteredData);
+        setWeatherData(data);
       })
       .catch((error) => console.error(error));
   }, [city]);
 
   return (
-    <div>
+    <div className="weather-container">
       {weatherData.map((item, index) => (
-        <div key={index}>
-          <p> {item.main.temp}°C</p>
+        <div className="weather-three" key={index}>
+          <div className="time">
+            <img
+              src={`https://openweathermap.org/img/w/${weatherData.weatherIcon}.png`}
+              alt={weatherData.description}
+            />
+            <p>{new Date(item.dt_txt).getHours()}:00</p>
+          </div>
+          <p>{item.main.temp}°</p>
         </div>
       ))}
     </div>
