@@ -3,6 +3,7 @@ import { threeHoursResponse } from "../../utils/threeHours";
 import "./weatherThree.scss";
 
 const WeatherThreeHours = ({ city }) => {
+  // Removed weatherData prop
   const [weatherData, setWeatherData] = useState([]);
 
   useEffect(() => {
@@ -18,11 +19,11 @@ const WeatherThreeHours = ({ city }) => {
       {weatherData.map((item, index) => (
         <div className="weather-three" key={index}>
           <div className="time">
-            <img
-              src={`https://openweathermap.org/img/w/${weatherData.weatherIcon}.png`}
-              alt={weatherData.description}
-            />
             <p>{new Date(item.dt_txt).getHours()}:00</p>
+            <img
+              src={`https://openweathermap.org/img/w/${item.weather[0].icon}.png`} // Changed weatherData.weatherIcon to item.weather[0].icon
+              alt={item.weather[0].description} // Changed weatherData.description to item.weather[0].description
+            />
           </div>
           <p>{item.main.temp}°</p>
         </div>
