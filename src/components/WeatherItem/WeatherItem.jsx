@@ -67,7 +67,6 @@ const WeatherItem = ({ weatherData }) => {
         <WeatherThreeHours city={weatherData.city} weatherData={weatherData} />
       </div>
       {/* <div id="map" ref={mapRef} style={{ height: "300px", width: "100%" }} /> */}
-      <WeatherButton buttonText="Погода на 4 дні" />
     </div>
   );
 };
