@@ -10,6 +10,7 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   const handleCitySelect = async (city) => {
     try {
@@ -26,7 +27,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkTheme ? "dark" : "light"}`}>
       <SearchForm onSearch={handleCitySelect} />
       <PopularCity onCityClick={handleCitySelect} />
       <WeatherItem weatherData={weatherData} />
