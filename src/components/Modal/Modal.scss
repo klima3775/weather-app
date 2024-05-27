@@ -1,45 +1,59 @@
-// .modal {
-//   position: fixed; /* Фиксированное позиционирование */
-//   z-index: 1; /* Положить модальное окно поверх других элементов */
-//   left: 0;
-//   top: 0;
-//   width: 100%; /* Полная ширина */
-//   height: 100%; /* Полная высота */
-//   overflow: auto; /* Включить прокрутку, если необходимо */
-//   background-color: rgba(0, 0, 0, 0.4); /* Черный фон с прозрачностью */
-
-//   &-content {
-//     background-color: #fefefe;
-//     margin: 15% auto; /* 15% от верхнего края и центрировано */
-//     padding: 20px;
-//     border: 1px solid #888;
-//     width: 80%; /* Ширина модального окна */
-
-//     &-close {
-//       color: #aaa;
-//       float: right;
-//       font-size: 28px;
-//       font-weight: bold;
-
-//       &:hover,
-//       &:focus {
-//         color: black;
-//         text-decoration: none;
-//         cursor: pointer;
-//       }
-//     }
-//   }
-// }
-
-$bg-color: #f4f4f4;
-$white: #fefefe;
-$text-clr: #333;
-$error-color: #ff0000;
-$error-hvr: #ff4d4d;
-
-.modal {
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный чёрный фон */
   display: flex;
   justify-content: center;
   align-items: center;
-  //   min-height: 100vh; /* 100% высоты вьюпорта */
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px; /* Максимальная ширина окна */
+  width: 100%; /* Окно занимает всю доступную ширину */
+  text-align: center;
+}
+
+.error-icon {
+  font-size: 40px;
+  color: white; /* Красный цвет для иконки */
+  background-color: red;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px; /* Центровка иконки */
+}
+
+.error-message {
+  font-size: 24px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.error-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.modal-button {
+  background-color: red; /* Красный фон кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal-button:hover {
+  background-color: #e04b4b; /* Темнее при наведении */
 }

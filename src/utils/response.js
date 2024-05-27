@@ -5,7 +5,7 @@ export const fetchWeatherData = (city) => {
   return fetch(apiUrl)
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Город не найден");
+        throw new Error("Місто не знайдено!");
       }
       return response.json();
     })
