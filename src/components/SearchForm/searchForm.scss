@@ -1,42 +1,50 @@
-* {
-  box-sizing: border-box;
-}
-.search {
+.search-container {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  align-items: center;
+}
 
-  form {
-    position: relative;
-    display: flex;
-    width: 300px;
-    margin: 0 auto;
-    justify-content: center;
-  }
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: #1e1e1e; /* Dark grey background for form */
+  padding: 5px;
+  border-radius: 50px; /* Fully rounded corners */
+}
 
-  input[type="text"] {
-    border: none;
-    outline: none;
-    width: 100%;
-    height: 50px;
-    padding-left: 20px;
-    border: 2px solid #7ba7ab;
-    border-radius: 5px;
-    outline: none;
-    background: #f9f0da;
-    color: #9e9c9c;
-    margin-right: auto;
-  }
+.search-input {
+  background-color: #1e1e1e; /* Match form background */
+  border: none;
+  color: #ffffff; /* White text color */
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 50px; /* Fully rounded corners */
+  outline: none;
+  flex-grow: 1;
+}
 
-  .weather-button {
-    position: absolute;
-    top: 0;
-    right: 0px;
-    width: 90px;
-    height: 50px;
-    border: none;
-    background: #7ba7ab;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-  }
+.search-input::placeholder {
+  color: #888; /* Light grey placeholder text */
+}
+
+.search-button {
+  background-color: #1e1e1e; /* Match form background */
+  border: none;
+  padding: 10px;
+  border-radius: 50%; /* Fully rounded button */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #333; /* Slightly lighter grey on hover */
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: #ffffff; /* White icon color */
 }

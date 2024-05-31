@@ -66,4 +66,16 @@ $marginSize: 20px;
   img {
     align-self: center;
   }
+
+  @media (max-width: 480px) {
+    width: 90%;
+    padding: $marginSize / 2;
+    margin: $marginSize / 3;
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    width: 90%;
+    padding: $marginSize;
+    margin: $marginSize;
+  }
 }
