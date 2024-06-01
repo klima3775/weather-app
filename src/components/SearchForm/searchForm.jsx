@@ -1,5 +1,4 @@
 import "./searchForm.scss";
-import WeatherButton from "../GetWeather/getWeather";
 import React, { useState } from "react";
 
 const SearchForm = ({ onSearch }) => {
@@ -15,25 +14,13 @@ const SearchForm = ({ onSearch }) => {
     setCity("");
   };
   return (
-    // <div className="search">
-    //   <form onSubmit={handleSubmit}>
-    //     <input
-    //       type="text"
-    //       value={city}
-    //       onChange={handleChange}
-    //       placeholder="Искать здесь..."
-    //     />
-    //     <WeatherButton buttonText="Показать погоду" />
-    //   </form>
-    // </div>
-
     <div class="search-container">
       <form class="search-form" onSubmit={handleSubmit}>
         <input
           type="text"
           value={city}
           onChange={handleChange}
-          placeholder="Искать здесь..."
+          placeholder="Шукати тут..."
           class="search-input"
         />
         <button type="submit" class="search-button">
