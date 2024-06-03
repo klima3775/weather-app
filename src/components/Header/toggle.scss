@@ -1,0 +1,24 @@
+.switch {
+  margin-bottom: 20px;
+}
+
+/* Увеличение размера переключателя */
+.my-switch .form-check-input {
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.my-switch .form-check-input:checked {
+  background-color: red;
+}
+
+.my-switch .form-check-input:before {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: margin-left 0.3s ease;
+}
+
+.my-switch .form-check-input:checked:before {
+  margin-left: 1.5rem;
+  background-color: green;
+}

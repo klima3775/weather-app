@@ -3,7 +3,8 @@ import PopularCity from "./components/PopularCity/popularCity";
 import SearchForm from "./components/SearchForm/SearchForm";
 import WeatherItem from "./components/WeatherItem/WeatherItem";
 import { fetchWeatherData } from "./utils/response";
-import Modal from "./components/Modal/Modal"; // Импортируйте ваш новый компонент модального окна
+import Modal from "./components/Modal/Modal";
+import ToggleSwitch from "./components/Header/toglge";
 import "./App.scss";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className={`App ${isDarkTheme ? "dark" : "light"}`}>
+      <ToggleSwitch />
       <SearchForm onSearch={handleCitySelect} />
       <PopularCity onCityClick={handleCitySelect} />
       <WeatherItem weatherData={weatherData} />
