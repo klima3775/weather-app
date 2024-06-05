@@ -1,5 +1,5 @@
-import "./searchForm.scss";
 import React, { useState } from "react";
+import "./searchForm.scss";
 
 const SearchForm = ({ onSearch }) => {
   const [city, setCity] = useState("");
@@ -13,29 +13,30 @@ const SearchForm = ({ onSearch }) => {
     onSearch(city);
     setCity("");
   };
+
   return (
-    <div class="search-container">
-      <form class="search-form" onSubmit={handleSubmit}>
+    <div className="search-container">
+      <form className="search-form" onSubmit={handleSubmit}>
         <input
           type="text"
           value={city}
           onChange={handleChange}
           placeholder="Шукати тут..."
-          class="search-input"
+          className="search-input"
         />
-        <button type="submit" class="search-button">
+        <button type="submit" className="search-button">
           <svg
-            class="search-icon"
+            className="search-icon"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1115.1 4.1a7.5 7.5 0 011.6 12.55L21 21z"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-6-6m2-2a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
         </button>
@@ -43,4 +44,5 @@ const SearchForm = ({ onSearch }) => {
     </div>
   );
 };
+
 export default SearchForm;

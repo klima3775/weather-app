@@ -1,48 +1,16 @@
-import { useEffect, useState } from "react";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
-import Moment from "react-moment";
-import WeatherButton from "../GetWeather/getWeather";
+import React, { useContext } from "react";
 import Timer from "../Timer/timer";
 import WeatherThreeHours from "../WeatherThreeHours/weatherHoursInfo";
-
+import { ThemeContext } from "../../App";
 import "./weather.scss";
 
 const WeatherItem = ({ weatherData }) => {
-  // const mapRef = useRef(); заготовка для карты
-
-  // useEffect(() => {
-  //   if (weatherData) {
-  //     const map = L.map(mapRef.current).setView([0, 0], 1);
-
-  //     // Добавьте этот слой первым, чтобы он был под слоем OpenWeatherMap
-  //     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  //       maxZoom: 19,
-  //       attribution: "Map data © OpenStreetMap contributors",
-  //     }).addTo(map);
-
-  //     L.tileLayer(
-  //       "https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid={apiKey}",
-  //       {
-  //         layer: "temp_new",
-  //         apiKey: "f8a6fd2ffd9f9c4b8a5d7d56edf35101", // замените на ваш API ключ
-  //         attribution: "Map data © OpenWeatherMap",
-  //         maxZoom: 40,
-  //       }
-  //     ).addTo(map);
-
-  //     return () => {
-  //       map.remove();
-  //     };
-  //   }
-  // }, [weatherData]);
-
   if (!weatherData) {
     return null;
   }
 
   return (
-    <div className="weather">
+    <div className={`weather`}>
       <div className="time">
         <Timer />
       </div>
@@ -66,7 +34,6 @@ const WeatherItem = ({ weatherData }) => {
       <div className="weather-forecast">
         <WeatherThreeHours city={weatherData.city} weatherData={weatherData} />
       </div>
-      {/* <div id="map" ref={mapRef} style={{ height: "300px", width: "100%" }} /> */}
     </div>
   );
 };

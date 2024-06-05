@@ -6,7 +6,37 @@
   box-sizing: border-box;
 }
 
-.App {
+// .App {
+//   text-align: center;
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   align-items: center;
+//   min-height: 100vh;
+//   background-image: url("./img/kosmos.jpg");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   overflow: hidden;
+
+//   @media (max-width: 1024px) {
+//     justify-content: flex-start;
+//     padding-top: 70px;
+//   }
+
+//   @media (max-width: 767px) {
+//     padding-top: 20px;
+//   }
+
+//   @media (max-width: 600px) {
+//     padding-top: 20px;
+//   }
+
+//   @media (max-width: 480px) {
+//     padding-top: 20px;
+//   }
+// }
+
+.App.dark {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -17,21 +47,17 @@
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+}
 
-  @media (max-width: 1024px) {
-    justify-content: flex-start;
-    padding-top: 70px;
-  }
-
-  @media (max-width: 767px) {
-    padding-top: 20px;
-  }
-
-  @media (max-width: 600px) {
-    padding-top: 20px;
-  }
-
-  @media (max-width: 480px) {
-    padding-top: 20px;
-  }
+.App.light {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("./img/Day.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }

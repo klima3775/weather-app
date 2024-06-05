@@ -4,8 +4,10 @@ import SearchForm from "./components/SearchForm/SearchForm";
 import WeatherItem from "./components/WeatherItem/WeatherItem";
 import { fetchWeatherData } from "./utils/response";
 import Modal from "./components/Modal/Modal";
-import ToggleSwitch from "./components/Header/toglge";
+import ToggleSwitch from "./components/Toogle/toglge";
 import "./App.scss";
+
+// export const ThemeContext = React.createContext();
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -27,14 +29,24 @@ function App() {
     setIsModalOpen(false);
   };
 
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
   return (
+    // <ThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
     <div className={`App ${isDarkTheme ? "dark" : "light"}`}>
-      <ToggleSwitch />
+      <ToggleSwitch toggleTheme={toggleTheme} />
       <SearchForm onSearch={handleCitySelect} />
       <PopularCity onCityClick={handleCitySelect} />
-      <WeatherItem weatherData={weatherData} />
+      <WeatherItem
+        weatherData={weatherData}
+        // setIsDarkTheme={toggleTheme}
+        // isDarkTheme={isDarkTheme}
+      />
       {isModalOpen && <Modal closeModal={closeModal} error={error} />}
     </div>
+    // </ThemeContext.Provider>
   );
 }
 
