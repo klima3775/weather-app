@@ -2,11 +2,11 @@ import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./toggle.scss";
 
-const ToggleSwitch = ({ toggleTheme }) => {
+const ToggleSwitch = ({ toggleTheme, textMode }) => {
   return (
     <Form>
       <div className="switch">
-        <p>dark</p>
+        <p>{textMode} mode</p>
         <Form.Check
           type="switch"
           id="custom-switch"

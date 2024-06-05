@@ -13,7 +13,7 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState("dark");
 
   const handleCitySelect = async (city) => {
     try {
@@ -36,7 +36,10 @@ function App() {
   return (
     // <ThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
     <div className={`App ${isDarkTheme ? "dark" : "light"}`}>
-      <ToggleSwitch toggleTheme={toggleTheme} />
+      <ToggleSwitch
+        toggleTheme={toggleTheme}
+        textMode={isDarkTheme ? "Dark" : "Light"}
+      />
       <SearchForm onSearch={handleCitySelect} />
       <PopularCity onCityClick={handleCitySelect} />
       <WeatherItem
