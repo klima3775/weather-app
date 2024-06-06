@@ -4,56 +4,66 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный чёрный фон */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.modal-container {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 400px; /* Максимальная ширина окна */
-  width: 100%; /* Окно занимает всю доступную ширину */
-  text-align: center;
-}
+  .modal-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  &.dark {
+    .modal-container {
+      background-color: grey;
+    }
+    .error-icon,
+    .modal-button,
+    p {
+      color: black;
+    }
+  }
 
-.error-icon {
-  font-size: 40px;
-  color: white; /* Красный цвет для иконки */
-  background-color: red;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 10px; /* Центровка иконки */
-}
+  .error-icon {
+    font-size: 40px;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+  }
 
-.error-message {
-  font-size: 24px;
-  color: red;
-  margin-bottom: 10px;
-}
+  .error-message {
+    font-size: 24px;
+    color: red;
+    margin-bottom: 10px;
+  }
 
-.error-description {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-}
+  .error-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
 
-.modal-button {
-  background-color: red; /* Красный фон кнопки */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  width: 100%;
-}
+  .modal-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+  }
 
-.modal-button:hover {
-  background-color: #e04b4b; /* Темнее при наведении */
+  .modal-button:hover {
+    background-color: #e04b4b;
+  }
 }

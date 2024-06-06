@@ -1,9 +1,9 @@
 import React from "react";
 import "./Modal.scss";
 
-function Modal({ closeModal, error }) {
+function Modal({ closeModal, error, isDarkTheme }) {
   return (
-    <div className="modal-overlay">
+    <div className={`modal-overlay ${isDarkTheme ? "light" : "dark"}`}>
       <div className="modal-container">
         <div className="modal-content">
           <div className="error-icon">?</div>
