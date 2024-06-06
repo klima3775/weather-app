@@ -2,49 +2,77 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.search-form {
-  display: flex;
-  align-items: center;
-  background-color: #1e1e1e; /* Dark grey background for form */
-  padding: 5px;
-  border-radius: 50px; /* Fully rounded corners */
-}
+  .search-form {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 5px;
+    border-radius: 50px;
+  }
 
-.search-input {
-  background-color: #1e1e1e; /* Match form background */
-  border: none;
-  color: #ffffff; /* White text color */
-  padding: 8px 15px 10px 15px;
-  font-size: 15px;
-  border-radius: 50px; /* Fully rounded corners */
-  outline: none;
-  flex-grow: 1;
-}
+  .search-input {
+    background-color: #1e1e1e;
+    border: none;
+    color: #ffffff;
+    padding: 8px 15px 10px 15px;
+    font-size: 15px;
+    border-radius: 50px;
+    outline: none;
+    flex-grow: 1;
+  }
 
-.search-input::placeholder {
-  color: #888; /* Light grey placeholder text */
-}
+  .search-input::placeholder {
+    color: #ffffff;
+  }
 
-.search-button {
-  background-color: #1e1e1e; /* Match form background */
-  border: none;
-  padding: 10px;
-  border-radius: 50%; /* Fully rounded button */
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s;
-}
+  .search-button {
+    background-color: #1e1e1e;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
 
-.search-button:hover {
-  background-color: #333; /* Slightly lighter grey on hover */
-}
+  .search-button:hover {
+    background-color: #333;
+  }
 
-.search-icon {
-  width: 20px;
-  height: 20px;
-  color: #ffffff; /* White icon color */
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+  }
+  &.light {
+    .search-form,
+    .search-input,
+    .search-button {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .search-input::placeholder {
+      color: #000000; /* Установите цвет плейсхолдера для светлой темы здесь */
+    }
+
+    .search-button .search-icon {
+      color: #000000; /* Установите цвет иконки для светлой темы здесь */
+    }
+  }
+  &.dark {
+    .search-form,
+    .search-input,
+    .search-button {
+      background-color: #1e1e1e;
+      color: #ffffff; /* Изменение цвета текста на белый */
+    }
+
+    .search-button .search-icon {
+      color: #ffffff; /* Установите цвет иконки для темной темы здесь */
+    }
+  }
 }

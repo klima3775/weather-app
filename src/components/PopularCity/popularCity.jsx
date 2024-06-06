@@ -5,7 +5,7 @@ const PopularCity = ({ onCityClick }) => {
   const sliderRef = useRef(null);
 
   const buttonsCity = [
-    { name: "Дніпро", label: "Днепр" },
+    { name: "Дніпро", label: "Дніпро" },
     { name: "Харків", label: "Харків" },
     { name: "Львів", label: "Львів" },
     { name: "Київ", label: "Київ" },

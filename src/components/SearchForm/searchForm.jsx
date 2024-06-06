@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./searchForm.scss";
 
-const SearchForm = ({ onSearch }) => {
+const SearchForm = ({ onSearch, isDarkTheme }) => {
   const [city, setCity] = useState("");
 
   const handleChange = (e) => {
@@ -15,8 +15,8 @@ const SearchForm = ({ onSearch }) => {
   };
 
   return (
-    <div className="search-container">
-      <form className="search-form" onSubmit={handleSubmit}>
+    <div className={`search-container ${isDarkTheme ? "light" : "dark"}`}>
+      <form className={"search-form"} onSubmit={handleSubmit}>
         <input
           type="text"
           value={city}
