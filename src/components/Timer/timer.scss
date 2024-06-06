@@ -12,6 +12,11 @@
       color: #f4f4f4;
     }
   }
+  &.light {
+    .info-date {
+      color: black;
+    }
+  }
 
   .timer {
     display: flex;

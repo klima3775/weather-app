@@ -1,18 +1,17 @@
-import React, { useContext } from "react";
 import Timer from "../Timer/timer";
 import WeatherThreeHours from "../WeatherThreeHours/weatherHoursInfo";
-import { ThemeContext } from "../../App";
+
 import "./weather.scss";
 
-const WeatherItem = ({ weatherData }) => {
+const WeatherItem = ({ weatherData, isDarkTheme }) => {
   if (!weatherData) {
     return null;
   }
 
   return (
-    <div className={`weather`}>
+    <div className={`weather ${isDarkTheme ? "light" : "dark"}`}>
       <div className="time">
-        <Timer />
+        <Timer isDarkTheme={isDarkTheme} />
       </div>
       <div className="top">
         <div className="left">

@@ -12,6 +12,11 @@
     margin: 0 10px;
     font-size: 28px;
   }
+  &.light {
+    .slider-button {
+      color: black;
+    }
+  }
 
   .slider-container {
     overflow-x: auto;

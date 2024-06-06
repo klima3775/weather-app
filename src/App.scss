@@ -1,3 +1,9 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -6,13 +12,16 @@
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &.dark {
     background-image: url("./img/darkjpg.jpg");
   }
 
   &.light {
-    background-image: url("./img/Day.jpg");
+    background-image: url("./img/Back.jpg");
   }
 
   @media (max-width: 1024px) {
@@ -31,10 +40,4 @@
   @media (max-width: 480px) {
     padding-top: 20px;
   }
-}
-
-* {
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
 }

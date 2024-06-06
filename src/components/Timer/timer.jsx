@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Moment from "react-moment";
 import "./timer.scss";
 
-const Timer = () => {
+const Timer = ({ isDarkTheme }) => {
   const [time, setTime] = useState(new Date());
   const [prevMinute, setPrevMinute] = useState(time.getMinutes());
   const [prevHour, setPrevHour] = useState(time.getHours());
@@ -38,7 +38,7 @@ const Timer = () => {
   }, [prevMinute, prevHour]);
 
   return (
-    <div className="local-date">
+    <div className={`local-date ${isDarkTheme ? "light" : "dark"}`}>
       <div className="date">
         <div className="info-date">
           <Moment format="dddd">{time}</Moment>

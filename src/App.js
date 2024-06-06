@@ -42,13 +42,15 @@ function App() {
         isDarkTheme={isDarkTheme}
       />
       <SearchForm onSearch={handleCitySelect} isDarkTheme={isDarkTheme} />
-      <PopularCity onCityClick={handleCitySelect} />
-      <WeatherItem
-        weatherData={weatherData}
-        // setIsDarkTheme={toggleTheme}
-        // isDarkTheme={isDarkTheme}
-      />
-      {isModalOpen && <Modal closeModal={closeModal} error={error} />}
+      <PopularCity onCityClick={handleCitySelect} isDarkTheme={isDarkTheme} />
+      <WeatherItem weatherData={weatherData} isDarkTheme={isDarkTheme} />
+      {isModalOpen && (
+        <Modal
+          closeModal={closeModal}
+          error={error}
+          isDarkTheme={isDarkTheme}
+        />
+      )}
     </div>
     // </ThemeContext.Provider>
   );

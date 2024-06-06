@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./popularCity.scss";
 
-const PopularCity = ({ onCityClick }) => {
+const PopularCity = ({ onCityClick, isDarkTheme }) => {
   const sliderRef = useRef(null);
 
   const buttonsCity = [
@@ -44,7 +44,7 @@ const PopularCity = ({ onCityClick }) => {
   };
 
   return (
-    <div className="popularCitySlider">
+    <div className={`popularCitySlider ${isDarkTheme ? "light" : "dark"}`}>
       <button className="slider-button" onClick={scrollLeft}>
         {"<"}
       </button>

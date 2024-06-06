@@ -22,7 +22,7 @@ export const threeHoursResponse = (city) => {
             wind: item.wind,
           };
         })
-        .slice(0, 6);
+        .slice(2, 8);
 
       return weatherInfo;
     })
